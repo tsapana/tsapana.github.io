@@ -142,7 +142,7 @@ let AuthorList = {
 				{photoUrl: 'content/img/photo4.jpg', id:5, city:'Archangelsk', phoneNumber:'345765432', email:'test@test.ru', name: 'Ivan Mikhalkov', toDofilters:['kitchen','hallway'], description:'Some information tetx about author job'},
 				{photoUrl: 'content/img/photo2.jpg', id:6, city:'St-Petersburg', phoneNumber:'234567898', email:'test@test.ru', name: 'Marina Zvonareva', toDofilters:['wardrobe'], description:'Some information tetx about author job'},
 				{photoUrl: 'content/img/photo7.jpg', id:7, city:'Moscow', phoneNumber:'353523444', email:'test@test.ru',name: 'Pert Filatov', toDofilters:['table'], description:'Some information tetx about author job'},
-				{photoUrl: 'content/img/empty-photo.jpg', id:8, city:'Barnaul', phoneNumber:'356921110', email:'test@test.ru', name: 'Oleg Lebedev',toDofilters:['table','bureau'], description:'Some information tetx about author job'},
+				{photoUrl: 'content/img/photo10.jpg', id:8, city:'Barnaul', phoneNumber:'356921110', email:'test@test.ru', name: 'Oleg Lebedev',toDofilters:['table','bureau'], description:'Some information tetx about author job'},
 				{photoUrl: 'content/img/photo8.jpg', id:9, city:'St-Petersburg', phoneNumber:'234910964', email:'test@test.ru', name: 'Victor Ivanov', toDofilters:['cupboard','bureau'], description:'Some information tetx about author job'},
 				{photoUrl: 'content/img/photo9.jpg', id:10, city:'St-Petersburg', phoneNumber:'345678765', email:'test@test.ru', name: 'Sergey Vasilyev', toDofilters:['hallway'], description:'Some information tetx about author job'},
 			],
