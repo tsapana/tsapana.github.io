@@ -135,7 +135,7 @@ let AuthorList = {
 	beforeCreate(){
 		fetch('https://tsapana.github.io/data.json').then((response) => {
 			return response.json().then((json) => {
-				this.authorsList = datajs;
+				this.authorsList = json;
 			})
 		})
 	},
