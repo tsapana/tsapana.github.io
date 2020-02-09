@@ -4980,7 +4980,7 @@ body.ngdialog-open,html.ngdialog-open {
     width: 25px;
     height: 25px;
     border: 0;
-    background: url(img/icon-search.svg) center top no-repeat
+    background: url(content/svg/icon-search.svg) center top no-repeat
 }
 
 .main-steps {
@@ -5183,7 +5183,7 @@ body.ngdialog-open,html.ngdialog-open {
     width: 25px;
     height: 25px;
     border: 0;
-    background: url(content/img/icon-search.svg) center top no-repeat
+    background: url(content/svg/icon-search.svg) center top no-repeat
 }
 
 .search-panel__sort {
