@@ -127,15 +127,20 @@ let AuthorList = {
 		filter:{ 
 			type: String, default: null
 		},
-		authorsList: {type: Object}
+		jsonData: {type: Array: default: function () { return [] }
 	},
 	components:{
 		author: AuthorInfoCard,
 	},
+	data(){
+		return {
+			authorsList: this.jsonData;
+		}
+	},
 	beforeCreate(){
 		fetch('https://tsapana.github.io/data.json').then((response) => {
 			return response.json().then((json) => {
-				this.authorsList = json;
+				this.jsonData = json;
 			})
 		})
 	},
