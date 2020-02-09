@@ -112,9 +112,6 @@ let AuthorInfoCard = {
 let AuthorList = {
 	template:'#author-list-template',
 	props:{
-		imageurl:{
-			type: String, default:''
-		},
 		sortby:{
 			type: String, default:''
 		},
@@ -127,26 +124,20 @@ let AuthorList = {
 		selectedAuthors:{
 			type: Array , default: function () { return [] }
 		},
-		filter:{ type: String, default: null}
+		filter:{ 
+			type: String, default: null
+		},
+		authorsList: {type: Object}
 	},
 	components:{
 		author: AuthorInfoCard,
 	},
-	data(){
-		return {
-			authorsList: [
-				{photoUrl: this.imageurl, id:1, city:'Moscow', phoneNumber:'040302482', email:'test@test.ru', name: 'Ivan Petrov', toDofilters:['kitchen','cupboard','wardrobe','hallway'],	description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:2, city:'Voronezh', phoneNumber:'563728492', email:'test@test.ru', name: 'Dmitry Ivanov', toDofilters:['table','cupboard'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:3, city:'St-Petersburg', phoneNumber:'355589211', email:'test@test.ru', name: 'Svetlana Voronova', toDofilters:['cupboard','wardrobe'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:4, city:'Moscow', phoneNumber:'349876576', email:'test@test.ru', name: 'Igor Smirnov', toDofilters:['kitchen'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:5, city:'Archangelsk', phoneNumber:'345765432', email:'test@test.ru', name: 'Ivan Mikhalkov', toDofilters:['kitchen','hallway'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:6, city:'St-Petersburg', phoneNumber:'234567898', email:'test@test.ru', name: 'Svetlana Voronova', toDofilters:['wardrobe'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:7, city:'Moscow', phoneNumber:'353523444', email:'test@test.ru',name: 'Pert Filatov', toDofilters:['table'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:8, city:'Barnaul', phoneNumber:'356921110', email:'test@test.ru', name: 'Oleg Lebedev',toDofilters:['table','bureau'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:9, city:'St-Petersburg', phoneNumber:'234910964', email:'test@test.ru', name: 'Victor Ivanov', toDofilters:['cupboard','bureau'], description:'Some information tetx about author job'},
-				{photoUrl: this.imageurl, id:10, city:'St-Petersburg', phoneNumber:'345678765', email:'test@test.ru', name: 'Sergey Vasilyev', toDofilters:['hallway'], description:'Some information tetx about author job'},
-			],
-		}
+	beforeCreate(){
+		fetch('https://tsapana.github.io/data.json').then((response) => {
+			return response.json().then((json) => {
+				this.authorsList = datajs;
+			})
+		})
 	},
 	computed: {
 		orderedAuthors: function () {		
@@ -223,7 +214,6 @@ var app = new Vue({
 				{id: 5, value:'hallway'},
 			],
 			selectedSortItem: 'name',
-			imageUrl:'content/img/empty-photo.jpg',
 			filter: '',
 			description: '',
 			city:'',
